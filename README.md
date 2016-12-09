@@ -89,7 +89,7 @@ Output theme can be vary according to your preferences.
 
 All PR’s are welcome!
 
-1. `fork` (https://github.com/vigo/textmate2-64tass-bundle.git)
+1. `fork` (https://github.com/vigo/textmate2-64tass-bundle/fork)
 1. Create your `branch` (`git checkout -b my-features`)
 1. `commit` yours (`git commit -am 'added killer options'`)
 1. `push` your `branch` (`git push origin my-features`)

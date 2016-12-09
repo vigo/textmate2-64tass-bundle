@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby18
+
+require ENV["TM_SUPPORT_PATH"] + "/lib/tm/executor"
+require ENV["TM_SUPPORT_PATH"] + "/lib/tm/save_current_document"
+
+unless ENV['TM_64TASS_PATH']
+  puts "Please set $TM_64TASS_PATH variable..."
+  puts "You can download compilers from:"
+  puts "http://www.popelganda.de/relaunch64.html"
+  exit
+end
+
+unless ENV['TM_VICE_PATH']
+  puts "Please set $TM_VICE_PATH variable..."
+  puts "You can download VICE from:"
+  puts "http://lallafa.de/blog/c64-projects/macvice/"
+  puts "or"
+  puts "http://vice-emu.sourceforge.net/macosx.html"
+  exit
+end
+
+default_compile_options = "-C -a"
+default_compile_options = ENV['TM_64TASS_OPTIONS'] if ENV['TM_64TASS_OPTIONS']
+
+tmp_file = "/tmp/program.prg"
+build_errors = false
+build = [ENV['TM_64TASS_PATH']]
+build += default_compile_options.split
+build += ["#{ENV["TM_FILEPATH"]}", "-o", tmp_file]
+
+TextMate::Executor.run(build) do |str, type|
+  build_errors = true if type == :err
+end
+
+sleep(0.001)
+unless build_errors
+  preview = [ENV['TM_VICE_PATH']]
+  preview += ENV['TM_VICE_OPTIONS'].split if ENV['TM_VICE_OPTIONS']
+  preview += [tmp_file]
+  TextMate::Process.run(preview)
+end
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.assembly.6502.64tass</string>
+	<key>uuid</key>
+	<string>EBCF54AE-80A3-4B60-B6B3-0DCE2337758C</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

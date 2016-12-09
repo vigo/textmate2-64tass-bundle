@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>asm</string>
+		<string>tas</string>
+		<string>tass</string>
+		<string>tass64</string>
+	</array>
+	<key>name</key>
+	<string>6502 Assembly (Tass)</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\b(?i:adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr|lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya)\b</string>
+			<key>name</key>
+			<string>keyword.6502-commands</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>end</key>
+			<string>"</string>
+			<key>name</key>
+			<string>string.quoted.double.64tass</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\.</string>
+					<key>name</key>
+					<string>constant.character.escape.64tass</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.assembly.6502.64tass</string>
+	<key>uuid</key>
+	<string>471A8674-8179-4C84-AAC4-4DF02E4558CA</string>
+</dict>
+</plist>

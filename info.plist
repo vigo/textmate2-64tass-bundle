@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>hthebmlvyznmry@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Uğur "vigo" Özyılmazel</string>
+	<key>description</key>
+	<string>Bundle for 64tass, Commodore 64 assembly command line compiler.
+You can download: http://singularcrew.hu/64tass/
+</string>
+	<key>name</key>
+	<string>64tass Bundle</string>
+	<key>uuid</key>
+	<string>45776F8E-6555-48C3-A022-72CA543434F9</string>
+</dict>
+</plist>

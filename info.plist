@@ -8,7 +8,7 @@
 	<string>Uğur "vigo" Özyılmazel</string>
 	<key>description</key>
 	<string>Bundle for 64tass, Commodore 64 assembly command line compiler.
-You can download: http://singularcrew.hu/64tass/
+You can download binary of 64tass at http://tass64.sourceforge.net/
 </string>
 	<key>name</key>
 	<string>64tass Bundle</string>

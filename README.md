@@ -81,6 +81,28 @@ configurations. It’s totally up to you.
 
 Output theme can be vary according to your preferences.
 
+## Theme Additions
+
+I’ve just added few scope names. Please add these scopes for better syntax
+coloring. I’m using **Solarized Dark Theme**
+
+	{	name = '64Tass - Hexadecimal, Dollar Sign';
+		scope = 'punctuation.definition.64tass.dollar.sign';
+		settings = { foreground = '#ffffff'; };
+	},
+	{	name = '64Tass - Labels';
+		scope = 'entity.name.64tass.label';
+		settings = { foreground = '#8C7ECC'; };
+	},
+	{	name = '64Tass - Comment';
+		scope = 'comment.line.semicolon.64tass';
+		settings = { background = '#184753'; };
+	},
+	{	name = '64Tass - Memory Pointer';
+		scope = 'punctuation.definition.64tass.star.equals';
+		settings = { foreground = '#6a5cdd'; };
+	},
+
 ## Contributer(s)
 
 * [Uğur "vigo" Özyılmazel](https://github.com/vigo) - Creator, maintainer

@@ -62,7 +62,7 @@ end
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.assembly.6502.64tass</string>
+	<string>source.assembly.64tass</string>
 	<key>uuid</key>
 	<string>EBCF54AE-80A3-4B60-B6B3-0DCE2337758C</string>
 	<key>version</key>

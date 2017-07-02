@@ -10,12 +10,7 @@
 require ENV["TM_SUPPORT_PATH"] + "/lib/tm/executor"
 require ENV["TM_SUPPORT_PATH"] + "/lib/tm/save_current_document"
 
-unless ENV['TM_64TASS_PATH']
-  puts "Please set $TM_64TASS_PATH variable..."
-  puts "You can download compilers from:"
-  puts "http://www.popelganda.de/relaunch64.html"
-  exit
-end
+tass_exe = "#{ENV['TM_BUNDLE_SUPPORT']}/bin/64tass"
 
 unless ENV['TM_VICE_PATH']
   puts "Please set $TM_VICE_PATH variable..."
@@ -31,7 +26,7 @@ default_compile_options = ENV['TM_64TASS_OPTIONS'] if ENV['TM_64TASS_OPTIONS']
 
 tmp_file = "/tmp/program.prg"
 build_errors = false
-build = [ENV['TM_64TASS_PATH']]
+build = [tass_exe]
 build += default_compile_options.split
 build += ["#{ENV["TM_FILEPATH"]}", "-o", tmp_file]
 
